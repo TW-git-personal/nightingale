@@ -35,13 +35,11 @@ show_shiny_app <- function(mortality_data = mortality) {
           "selected_causes",
           "Select Causes of Death:",
           choices = colnames(mortality)[-1], # Exclude the 'date' column
-          selected = colnames(mortality)[-1],
-          size = 4,
+          selected = colnames(mortality)[-1], size = 4,
           selectize = FALSE,
           multiple = TRUE
         ),
-        shiny::checkboxInput(
-          "show_vline",
+        shiny::checkboxInput("show_vline",
           "Show date of Nightingale's Improvements",
           value = TRUE
         )
